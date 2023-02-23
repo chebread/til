@@ -16,16 +16,17 @@ function Example() {
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column; // 600보다 작으면
-  @media (min-width: 600px) {
-    // min-width: 600 => 600보다 크면
-    flex-direction: row;
-  }
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+  height: 100vh;
 `;
 const Items = styled.div`
   background-color: seagreen;
   border: 3px solid #fff;
   box-sizing: border-box;
+  width: 300px;
+  height: 100px;
 `;
 
 export default Example;
