@@ -3,13 +3,9 @@ import styled from "styled-components";
 function Example() {
   return (
     <Container>
-      <Items>Lorem ipsum dolor sit amet consectetur.</Items>
-      <Items>
-        adipisicing elit. Id ad iure esse non nemo corporis commodi provident,
-      </Items>
-      <Items>
-        excepturi quaerat nesciunt placeat. Deleniti, reprehenderit.
-      </Items>
+      <Items>adipisicing adipisicing adipisicing adipisicing</Items>
+      <Items>adipisicing</Items>
+      <Items>adipisicing</Items>
     </Container>
   );
 }
@@ -17,16 +13,25 @@ function Example() {
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  align-content: center;
-  flex-wrap: wrap;
   height: 100vh;
+  background-color: seagreen;
+  width: 100vw;
 `;
 const Items = styled.div`
   background-color: seagreen;
   border: 3px solid #fff;
   box-sizing: border-box;
-  width: 300px;
-  height: 100px;
+  height: 300px;
+  width: 400px;
+  &:nth-child(1) {
+    flex-shrink: 1;
+  }
+  &:nth-child(2) {
+    flex-shrink: 5;
+  }
+  &:nth-child(3) {
+    flex-shrink: 1;
+  }
 `;
 
 export default Example;
