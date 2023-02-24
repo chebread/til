@@ -14,6 +14,8 @@ const Flex = css`
   flex-flow: flex-direction flex-wrap; // f-d, f-w 줄인 속성
 `;
 
+const FlexBasis = css``;
+
 const 정렬 = css`
   // justify: main axis 방향으로 정렬 // 가로 혹은 세로 정렬
   // align: cross axis 방향으로 정렬 // 세로 혹은 가로 정렬
