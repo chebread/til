@@ -22,6 +22,20 @@ const FlexFlow = css`
   flex-flow: flex-direction flex-wrap; // f-d, f-w 줄인 속성
 `;
 
+const Order = css`
+  // order: min ~ max min일때 먼저 배치가 되고 min ~ max의 순서중에서 작은게 먼저, 큰게 나중에, max가 가장 나중에 배치되게 된다.
+  // 배치순서를 정하는 속성이다.
+  order: 1;
+`;
+
+const ZIndex = css`
+  // position 설정말고 flex 설정되어 있어도 이 속성을 사용할 수 있다.
+`;
+// flex item에 적용하는 속성
+const AlignSelf = css`
+  // align-items보다 우선권이 있는 Items 개별에 적용하는 속성으로 align-items와 같은 cross axis의 방향으로 정렬하되, 아이템에 정렬하는 속성이다.
+  align-self: align-items와 같은 속성임;
+`;
 // 중요
 // flex item에 적용하는 속성
 const FlexBasis = css`
@@ -46,6 +60,11 @@ const FlexGrow = css`
   // Item이 둘이 flex-grow가 1:1로 설정되어 있다면 남은 여백의 크기를 각각의 Item의 여백으로 균일히 제공할 것이며,
   // Item이 셋이 flex-grow가 1:1:1로 설정되어 있다면 남은 여백의 크기를 각각의 Item의 여백으로 제공할 것이다.
   // 그치만 Item이 셋이 flex-grow가 1:5:1로 설정되어 있다면 남은 여백의 크기를 각각 1:5:1로서 분배하여 Item의 여백으로서 제공할 것이다.
+
+  // 중요
+  // ref: f-g, f-s도 늘어날 공간이 있어야 늘어난다. (flex container height 제공 필수)
+  // ref: 그치만 이것이 Wrap이 되어서 개행되었을때는 flex-container도 같이 높이가 늘어나기에 세로운 행이 새로이 생긴것이니, 또 여백이 생기게 된다 (width가 있다면) 그렇기에
+  // 이속성이 무시되지 않고 모든 아이템에, Wrapped된 아이템에도 적용되는 것이다!
 `;
 
 // 중요
@@ -121,4 +140,8 @@ const Width = css`
 const Height = css`
   min-height: 100px; // 최소가 100px 이상
   max-height: 100px; // 최대가 100px 이하
+`;
+
+const MarginAuto = css`
+  // margin-(direction): auto의 의의는 direction의 방향에서 한 방향의 끝까지 마진을 써서 거기의 방향으로 간다는 의미이다. (그 방향부터 끝까지 소비하여 붙인다는 의미)
 `;
