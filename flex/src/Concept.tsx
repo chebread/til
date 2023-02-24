@@ -1,5 +1,9 @@
 import { css } from "styled-components";
 
+// Flex vs Grid
+// Flex는 1차원적인 것과, Wrap되는 컨텐츠들을 컨트롤하며, Grid는 2차원 적인 것과 전반적인 레이아웃을 구성할때 사용합니다.
+// 즉, Grid는 전반적인 틀, Flex는 그 틀의 컨텐츠들
+
 const FlexDirection = css`
   display: flex; // Flex는 Item이 가진 요소만 늘어난다
 
@@ -22,11 +26,13 @@ const FlexFlow = css`
 // flex item에 적용하는 속성
 const FlexBasis = css`
   // flex-basis: Flex 아이템이 가지는 기본 크기 (점유하는 기본 크기) 설정 f-d가 row 이면 넓이, column이면 높이 설정하는 것이다.
-  flex-basis: auto; // 자신이 가진 크기만큼 설정되는 옵션
+  flex-basis: auto; // 자신이 가진 크기만큼 설정되는 옵션 // 기본적으로는 width의 값을 f-b가 가지게 된다
   flex-basis: 100px; // Item들이 가지는 크기가 100px 이하이면 100px까지 width 가 늘어나며 (row일 경우) 100px 이상이면 자기자신의 크기로서 설정된다.
   width: 100px; // f-b: 100px과 차이점은 그저 모든 Item들이 100px이 고정으로 된다. 100px 이하던 이상이던 100px만 width로 설정한다.
 
   flex-basis: content; //
+  // ref: flex-basis: auto일 경우는 설정한 width의 값이 들어가게 된다. (기본적으로 flex내에서 width를 적용할때)
+  // 그치만 flex:1 같이 flex-basis: 0 이면 width가 아무리 바뀌어도 basis: 0이니 그저 자기자신만 크기로 가지게 된다
 `;
 
 // 중요 [https://blogpack.tistory.com/863] 참고
@@ -110,4 +116,9 @@ const Width = css`
   max-width: 100px; // 최대가 100 이하: x <= 100 // 100보다 작으면
   // # max-width를 사용하는 경우
   // 데스크탑용의 가장 큰 화면 사이즈의 레이아웃을 기본으로 하고, 점차 축소하는 형태로 CSS를 작성합니다.
+`;
+
+const Height = css`
+  min-height: 100px; // 최소가 100px 이상
+  max-height: 100px; // 최대가 100px 이하
 `;
