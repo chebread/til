@@ -22,7 +22,9 @@ const UserListUI = () => {
   );
 };
 
-const MessageList = styled.div``;
+const MessageList = styled.div`
+  margin-bottom: 2rem;
+`;
 const MessageItem = styled.div`
   display: flex;
   margin-bottom: 1.5em;

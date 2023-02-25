@@ -21,7 +21,9 @@ const BulletListUI = () => {
   );
 };
 
-const InfoList = styled.div``;
+const InfoList = styled.div`
+  margin-bottom: 2rem;
+`;
 const InfoListItem = styled.div`
   margin: 0.5em 0;
   display: flex;

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const MenuUI = () => {
   return (
@@ -21,6 +21,9 @@ const MenuUI = () => {
 
 const Menu = styled.div`
   display: flex;
+  @media (min-width: 1024px) {
+    width: 100%;
+  }
 `;
 const MenuItem = styled.div`
   flex-grow: 1;

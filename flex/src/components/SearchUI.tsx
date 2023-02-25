@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const SearchUI = () => {
   return (
@@ -11,7 +11,10 @@ const SearchUI = () => {
 
 const SearchForm = styled.div`
   display: flex;
+  margin-left: auto;
   height: 40px;
+  width: 300px;
+  max-width: 60%; // 무슨 의미
 `;
 const SearchInput = styled.input`
   flex-grow: 1;
