@@ -1,4 +1,4 @@
-import { css } from "styled-components";
+import { css } from 'styled-components';
 
 // Flex vs Grid
 // Flex는 1차원적인 것과, Wrap되는 컨텐츠들을 컨트롤하며, Grid는 2차원 적인 것과 전반적인 레이아웃을 구성할때 사용합니다.
@@ -145,3 +145,49 @@ const Height = css`
 const MarginAuto = css`
   // margin-(direction): auto의 의의는 direction의 방향에서 한 방향의 끝까지 마진을 써서 거기의 방향으로 간다는 의미이다. (그 방향부터 끝까지 소비하여 붙인다는 의미)
 `;
+
+const Dispaly = css`
+  display: inline; // 한 Item이 width, height, padding, margin을 반영하지 않음
+  display: block; // 반대로 이것은 한 Item이 모두 반영함
+  display: inline-block; // 내부적으로는 display: block을 반영하지만, 외부적으로는 display: inline을 반영함
+`;
+
+const TextAlign = css`
+  // text-align: display: block 내에 있는 dispaly: inline의 요소를 정렬하는 속성
+  text-align: center; // block 내에서 중앙으로 정렬한다.
+`;
+
+const Sizes = css`
+  font-size: 1em;
+  // em과 rem은 font-size의 값에 비례하여 결정되는 상대단위이다.
+  // em은 현재 이 단위가 사용되고 있는 아이템의 font-size를 참조합니다.
+  // font-size: 16px; 일경우
+  /* 0.5em = 16 px x 0.5 = 8px
+  1em = 16 (단위가 속한 Item의 font-size) px x 1 = 16px
+  2em = 16 px x 2 = 32px
+  3em = 16 px x 3 = 48px */
+
+  font-size: 1rem;
+  // 이렇게 Nem = 16 * n의 공식을 사용합니다.
+  // 그치만 rem은 이 단위가 사용되고 있는 아이템의 font-size를 참조하는 것이 아닌 프로젝트의 Root, 최상위 요소의 font-size를 참조합니다.
+  // html에서 font-size: 16px 이라면
+  // Nrem = 16 (root font-size) px * n
+
+  font-size: 1vh; // viewport의 높이값의 100 / 1이 1vh이다
+  font-size: 1vw; // viewport의 넓이값의 100 / 1이 1vw이다
+  font-size: 1%; // 한 아이템의 font-size에서 1%만 가져온다
+  font-size: 1vmin; //
+  font-size: 1vmax; //
+`;
+
+// 개념이 어려움
+const 가상Element생성 = css`
+  // ::before = 요소 내에서 바로앞에 content: 에 설정된 어떤 문자를 추가함, 하나의 엘리먼트가 추가된다고 생각하면 됨
+  // ::after = 요소 내에서 바로 뒤에 content: 에 설정된 어떤 문자를 추가함, ditto
+`;
+
+const LeftRightTopBottom = css``;
+
+// flex-grow: 늘어날수 있는 대까지 들어남 // 여백은 그저 한 열의 남아있는 여백을 뜻함. 중요한것은 한 열임!!!!! (맞냐?)
+// flex-wrap: Wrap되면 또 다르게 열이 생기니, 그 열에서 어떤 것을 처리하게 된다. 처리하는 대상이 2개가 된것임
+// flex-shrink: 기준에 맞게 줄어들음

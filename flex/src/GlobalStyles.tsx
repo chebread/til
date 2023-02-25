@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   body {
@@ -10,28 +10,11 @@ const GlobalStyles = createGlobalStyle`
   }
   
   html, body, #root {
-    position: relative;
-    height: 100%;
-    background-color: #0a0a0a;
-    color: #fff;
+    color: #000;
     font-weight: 600;
     box-sizing: border-box;
     cursor: text; // none
   }
-  
-  /* ::selection {
-    background-color: rgb(7, 238, 0, 99.9999999999999%); // 99%: 사파리 대응을 위해 반투명 설정함
-    color: #000;
-  } */
-
-  ::-webkit-scrollbar {
-    display: none;
-  }
-  /* @media (max-width: 1150px) {
-    body {
-      display: none;
-    }
-  } */
 `;
 
 export default GlobalStyles;
